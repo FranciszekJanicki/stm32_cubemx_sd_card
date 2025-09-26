@@ -25,7 +25,7 @@
 // It is designed to be wrapped by a cubemx generated user_diskio.c file.
 
 #include "user_diskio_spi.h"
-#include "stm32l4xx_hal.h" /* Provide the low-level HAL functions */
+#include "stm32f4xx_hal.h" /* Provide the low-level HAL functions */
 
 // Make sure you set #define SD_SPI_HANDLE as some hspix in main.h
 // Make sure you set #define SD_CS_GPIO_Port as some GPIO port in main.h

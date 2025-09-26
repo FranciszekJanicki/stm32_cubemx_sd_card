@@ -32,6 +32,7 @@ target_sources(stm32cubemx INTERFACE
     ../../Core/Src/stm32f4xx_hal_msp.c
     ../../FATFS/App/fatfs.c
     ../../FATFS/Target/user_diskio.c
+    ../../FATFS/Target/user_diskio_spi.c
     ../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
     ../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
     ../../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c
@@ -53,8 +54,6 @@ target_sources(stm32cubemx INTERFACE
     ../../Middlewares/Third_Party/FatFs/src/ff_gen_drv.c
     ../../Middlewares/Third_Party/FatFs/src/option/syscall.c
     ../../Middlewares/Third_Party/FatFs/src/option/ccsbcs.c
-    ../../Core/Src/sysmem.c
-    ../../Core/Src/syscalls.c
     ../../startup_stm32f446xx.s
 )
 
