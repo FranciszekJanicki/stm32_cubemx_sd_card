@@ -23,20 +23,18 @@ sd_card_err_t sd_card_cat(sd_card_t const* card,
                           sd_card_buffer_t* output);
 
 sd_card_err_t sd_card_touch(sd_card_t const* card, sd_card_path_t path);
+sd_card_err_t sd_card_unlink(sd_card_t const* card, sd_card_path_t path);
 
 sd_card_err_t sd_card_ls(sd_card_t const* card,
                          sd_card_path_t path,
                          sd_card_buffer_t* output);
 
 sd_card_err_t sd_card_mkdir(sd_card_t const* card, sd_card_path_t path);
-
 sd_card_err_t sd_card_rmdir(sd_card_t const* card, sd_card_path_t path);
 
 sd_card_err_t sd_card_rename(sd_card_t const* card,
                              sd_card_path_t old_path,
                              sd_card_path_t new_path);
-
-sd_card_err_t sd_card_unlink(sd_card_t const* card, sd_card_path_t path);
 
 sd_card_err_t sd_card_stat(sd_card_t const* card,
                            sd_card_path_t path,
@@ -45,7 +43,6 @@ sd_card_err_t sd_card_stat(sd_card_t const* card,
 sd_card_err_t sd_card_read(sd_card_t const* card,
                            sd_card_path_t path,
                            sd_card_buffer_t* output);
-
 sd_card_err_t sd_card_write(sd_card_t const* card,
                             sd_card_path_t path,
                             sd_card_buffer_t const* input);

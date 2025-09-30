@@ -28,8 +28,8 @@ typedef struct {
 typedef struct {
     FATFS* file_system;
 
-    void* (*allocate)(UINT);
-    void (*deallocate)(void*);
+    TCHAR* (*allocate)(UINT);
+    void (*deallocate)(TCHAR*);
 } sd_card_interface_t;
 
 char* sd_card_err_to_string(sd_card_err_t err);

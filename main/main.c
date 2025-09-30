@@ -10,6 +10,16 @@
 
 void SystemClock_Config(void);
 
+TCHAR* sd_card_allocate(UINT buffer_len)
+{
+    return malloc(buffer_len);
+}
+
+void sd_card_deallocate(TCHAR* buffer)
+{
+    return free(buffer);
+}
+
 int main(void)
 {
     HAL_Init();
@@ -21,13 +31,12 @@ int main(void)
     MX_FATFS_Init();
 
     sd_card_t card;
-
     sd_card_config_t card_config = {};
     strncpy(card_config.mount_point, "0:", sizeof("0:"));
 
     sd_card_interface_t card_interface = {.file_system = &USERFatFS,
-                                          .allocate = malloc,
-                                          .deallocate = free};
+                                          .allocate = sd_card_allocate,
+                                          .deallocate = sd_card_deallocate};
     sd_card_err_t err =
         sd_card_initialize(&card, &card_config, &card_interface);
     if (err != SD_CARD_ERR_OK) {
@@ -64,4 +73,9 @@ int main(void)
     }
 
     printf("Read from %s: %s\n\r", fullpath, read_buffer.buffer);
+
+    while (1) {
+        ;
+        ;
+    }
 }
