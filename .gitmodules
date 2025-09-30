@@ -1,0 +1,3 @@
+[submodule "submodules/sd_card"]
+	path = submodules/sd_card
+	url = git@github.com:FranciszekJanicki/sd_card.git
