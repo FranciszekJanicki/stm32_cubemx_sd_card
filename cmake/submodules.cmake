@@ -1,5 +1,7 @@
 include_guard(GLOBAL)
 
+include(${CMAKE_CURRENT_LIST_DIR}/common.cmake)
+
 function(add_subdirectories parent_dir)
     file(GLOB CHILD_DIRS RELATIVE "${parent_dir}" "${parent_dir}/*")
 
@@ -12,4 +14,4 @@ function(add_subdirectories parent_dir)
             endif()
         endif()
     endforeach()
-endfunction()
+endfunction(add_subdirectories)
